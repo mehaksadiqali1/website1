@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form style="width: 30%">
+        <h1>ACME Car Rental</h1>
+
+        <label for="nameInput">First Name</label>
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="enter first name"
+          value="Mehak"
+        />
+
+        <!-- radiobutton group -->
+        <fieldset>
+          <legend>Pick up date</legend>
+          <input type="date" id="pickup-date" required />
+          <label for="pickup-date">Numbers of days:</label>
+
+          <input type="number" id="days" min="1" required />
+        </fieldset>
+      </form>
+
+      <div class="options">
+        <p>Options</p>
+        <label
+          ><input type="checkbox" id="toll" value="3.95" /> Electronic Toll Tag
+          ($3.95/day)</label
+        >
+        <label
+          ><input type="checkbox" id="gps" value="2.95" /> GPS
+          ($2.95/day)</label
+        >
+        <label
+          ><input type="checkbox" id="roadside" value="2.95" /> Roadside
+          Assistance ($2.95/day)</label
+        >
+      </div>
+      <label>Under 25</label>
+      <label><input type="radio" name="under25" value="no" checked />No</label>
+      <label><input type="radio" name="under25" value="yes" />Yes</label>
+      <button id="placeOrderButton" type="button">Esitamate Total Cost</button>
+      <label for="nameInput">Total Due</label>
+      <input type="text" id="total" placeholder="total" value="Total" readonly />
+    </main>
+    <script src="mein.js"></script>
+  </body>
+</html>
